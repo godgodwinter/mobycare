@@ -111,7 +111,12 @@ export const CardMenu: React.FC<CardMenuProps> = ({ Icon, label }) => {
   );
 };
 
-export const CardBerita = ({ Image, title }) => {
+interface CardBeritaProps {
+  Image: string;
+  title: string;
+}
+
+const CardBerita: React.FC<CardBeritaProps> = ({ Image, title }) => {
   return (
     <>
       <div className="py-2 card w-96 bg-base-100 shadow-xl">
