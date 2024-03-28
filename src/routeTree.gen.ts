@@ -22,6 +22,9 @@ import { Route as LayoutAdminAdminBookingImport } from './routes/_layout-admin/a
 
 // Create Virtual Routes
 
+const Step4LazyImport = createFileRoute('/step4')()
+const Step3LazyImport = createFileRoute('/step3')()
+const Step2LazyImport = createFileRoute('/step2')()
 const ProfileLazyImport = createFileRoute('/profile')()
 const LoginLazyImport = createFileRoute('/login')()
 const DatatableLazyImport = createFileRoute('/datatable')()
@@ -31,6 +34,21 @@ const LayoutLazyImport = createFileRoute('/_layout')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
+
+const Step4LazyRoute = Step4LazyImport.update({
+  path: '/step4',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/step4.lazy').then((d) => d.Route))
+
+const Step3LazyRoute = Step3LazyImport.update({
+  path: '/step3',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/step3.lazy').then((d) => d.Route))
+
+const Step2LazyRoute = Step2LazyImport.update({
+  path: '/step2',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/step2.lazy').then((d) => d.Route))
 
 const ProfileLazyRoute = ProfileLazyImport.update({
   path: '/profile',
@@ -130,6 +148,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProfileLazyImport
       parentRoute: typeof rootRoute
     }
+    '/step2': {
+      preLoaderRoute: typeof Step2LazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/step3': {
+      preLoaderRoute: typeof Step3LazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/step4': {
+      preLoaderRoute: typeof Step4LazyImport
+      parentRoute: typeof rootRoute
+    }
     '/_layout/layout-a': {
       preLoaderRoute: typeof LayoutLayoutAImport
       parentRoute: typeof LayoutLazyImport
@@ -171,6 +201,9 @@ export const routeTree = rootRoute.addChildren([
   DatatableLazyRoute,
   LoginLazyRoute,
   ProfileLazyRoute,
+  Step2LazyRoute,
+  Step3LazyRoute,
+  Step4LazyRoute,
   LayoutguestBlogRoute,
 ])
 

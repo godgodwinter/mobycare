@@ -1,6 +1,6 @@
 import { Link, createLazyFileRoute } from '@tanstack/react-router';
 
-export const Route = createLazyFileRoute('/')({
+export const Route = createLazyFileRoute('/step2')({
   component: Index,
 })
 
@@ -30,9 +30,9 @@ const LoginPages = ()=>{
 
                         <div className="py-8">
                             <center>
-                                <span className="text-2xl font-semibold">Selamat Datang di </span>
-                        <h2 className="font-bold text-3xl">MOBY <span className="bg-[#f84525] text-white px-2 rounded-md">CARE</span></h2>
-                        <p className='text-sm leading-relaxed my-4'>Aplikasi pemantauan tumbuh kembang anak yang terintegrasi antara kesehatan ibu dan anak, pendidikan parenting dan psikologi anda</p>
+                                <span className="text-2xl font-semibold">Pantau Tumbuh</span>
+                        <h2 className="font-bold text-3xl"> <span className="bg-[#f84525] text-white px-2 rounded-md">Kembang Anak</span></h2>
+                        <p className='text-sm leading-relaxed my-4'>Pantau tumbuh kembang anak secara lengkap, tepat, praktis hanya satu aplikasi dan abadikan setiap momennya.</p>
                             </center>
                         </div>
 
@@ -42,7 +42,7 @@ const LoginPages = ()=>{
                         <div className='flex justify-center'>     
     <ul className="steps steps-horizontal">
   <li className="step step-primary"></li>
-  <li className="step "></li>
+  <li className="step step-primary"></li>
   <li className="step"></li>
   <li className="step"></li>
 </ul></div>
@@ -54,7 +54,7 @@ const LoginPages = ()=>{
         </Link>{' '}
    
    
-                                <Link to="/step2" className="ms-4 inline-flex items-center px-4 py-2 bg-[#f84525] border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-800 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                                <Link to="/step3" className="ms-4 inline-flex items-center px-4 py-2 bg-[#f84525] border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-800 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
            Next
         </Link>{' '}
 
