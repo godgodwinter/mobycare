@@ -7,7 +7,7 @@ export const Route = createRootRoute({
     {/* <NavbarTesting/> */}
     <div className='min-h-screen'>
       <Outlet /></div>
-      <TanStackRouterDevtools />
+      {/* <TanStackRouterDevtools /> */}
     </>
   ),
 })

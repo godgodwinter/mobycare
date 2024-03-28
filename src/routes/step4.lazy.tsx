@@ -13,6 +13,7 @@ function Index() {
 }
 
 import logo1 from '@/assets/mobycare/logo1.png'
+import Splash from '@/assets/mobycare/splash_3.png'
 const LoginPages = ()=>{
   return(
     <>
@@ -21,7 +22,9 @@ const LoginPages = ()=>{
                             <div>
                                 <div className="avatar">
             <div className="w-24 mask mask-squircle">
-                <img src={logo1} />
+                
+  <Link to="/" className='font-bold link link-neutral capitalize'>
+    <img src={logo1} /> </Link>
             </div>
             </div>
                 </div>
@@ -29,7 +32,9 @@ const LoginPages = ()=>{
                 <div className="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
 
                         <div className="py-8">
-                            <center>
+                            <center>  <div className="w-52 rounded py-10">
+                <img src={Splash} />
+            </div>
                                 <span className="text-2xl font-semibold">Anak Tumbuh</span>
                         <h2 className="font-bold text-3xl"> <span className="bg-[#f84525] text-white px-2 rounded-md">Sehat</span></h2>
                         <h2 className="font-bold text-3xl"> <span className="text-2xl font-semibold">Orang Tua</span></h2>

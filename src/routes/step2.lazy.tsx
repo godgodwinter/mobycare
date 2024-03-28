@@ -13,6 +13,8 @@ function Index() {
 }
 
 import logo1 from '@/assets/mobycare/logo1.png'
+
+import Splash from '@/assets/mobycare/splash_1.png'
 const LoginPages = ()=>{
   return(
     <>
@@ -21,7 +23,9 @@ const LoginPages = ()=>{
                             <div>
                                 <div className="avatar">
             <div className="w-24 mask mask-squircle">
-                <img src={logo1} />
+                
+  <Link to="/" className='font-bold link link-neutral capitalize'>
+    <img src={logo1} /> </Link>
             </div>
             </div>
                 </div>
@@ -30,6 +34,9 @@ const LoginPages = ()=>{
 
                         <div className="py-8">
                             <center>
+                            <div className="w-52 rounded py-10">
+                <img src={Splash} />
+            </div>
                                 <span className="text-2xl font-semibold">Pantau Tumbuh</span>
                         <h2 className="font-bold text-3xl"> <span className="bg-[#f84525] text-white px-2 rounded-md">Kembang Anak</span></h2>
                         <p className='text-sm leading-relaxed my-4'>Pantau tumbuh kembang anak secara lengkap, tepat, praktis hanya satu aplikasi dan abadikan setiap momennya.</p>

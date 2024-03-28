@@ -24,7 +24,9 @@ const LoginPages = ()=>{
                     </a> */}
                     <div className="avatar">
   <div className="w-24 mask mask-squircle">
-    <img src={logo1} />
+    
+  <Link to="/" className='font-bold link link-neutral capitalize'>
+    <img src={logo1} /> </Link>
   </div>
 </div>
                 </div>
@@ -33,7 +35,7 @@ const LoginPages = ()=>{
 
                         <div className="py-8">
                             <center>
-                                <span className="text-2xl font-semibold">Sign in to AdminPanel</span>
+                                <span className="text-2xl font-semibold">Sign in </span>
                             </center>
                         </div>
 
@@ -65,14 +67,20 @@ const LoginPages = ()=>{
                               
 
                                 <Link to="/admin/sekolah" className="ms-4 inline-flex items-center px-4 py-2 bg-[#f84525] border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-800 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
-           Sign In
+           Login
         </Link>{' '}
                             {/* <button className= 'ms-4 inline-flex items-center px-4 py-2 bg-[#f84525] border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-800 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150'>
                                 Sign In
                             </button> */}
 
                         </div>
-                        
+                        <div className="divider"></div>
+                        <div className='p-2'>
+                          <div className='text-center space-y-2'>
+                            <p className='font-medium'> Belum punya akun ?</p>
+                              <Link to="/register" className='font-bold link link-neutral capitalize'>Register </Link>
+                              </div>
+                        </div>
                 </div>
             </div>
         </div>
