@@ -6,6 +6,6 @@ export const Route = createFileRoute('/_layout-user/user/komunitas')({
 
 function LayoutAComponent() {
   return <div>Komunitas
-
+aa
   </div>
 }
